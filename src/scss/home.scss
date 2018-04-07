@@ -1,0 +1,91 @@
+@import './../utilities/variables.scss';
+
+.nav{
+    position: fixed;
+    height: $navHeight;
+    font-size: 1.3em;
+    width: 100vw;
+    top: 0;
+    color: $color_dark;
+    background-color: white;
+    box-shadow: 0 0 45px rgba(0,0,0,.2);
+    .contain{
+        width: 70%;
+        margin-left: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            height: $navHeight - 10px;
+        }
+        h1, h2, ul li{
+            padding: 0 15px;
+            height: $navHeight;
+            display: flex;
+            align-items: center;
+        }
+        ul{
+            margin-left: auto;
+            list-style: none;
+            display: flex;
+            li{
+                font-size: 1em;
+                // padding: 15px 10px;
+                a{
+                    text-decoration: none;
+                    color:inherit;
+                    &:visited{
+                        color:inherit;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.landing{
+    margin-top: $navHeight;
+    height: 450px;
+    background: linear-gradient(0deg, $color_dark, $color_light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 50%;
+        h1{
+            font-size: 2.3em;
+        }
+    
+        button {
+            font-size: 1.8em;
+            padding: 15px 40px;
+            background: rgba(0,0,0,0);
+            // box-shadow: ;
+            border: 3px solid white;
+            font-weight: 300;
+            letter-spacing: .1em;
+            color:inherit;
+            border-radius: 100px;
+        }
+    }  
+}
+
+.solutions {
+    .container{
+        width: 70%;
+        margin-left: 15%;
+        border: 1px solid black;
+        .box{
+            padding: 30px;
+            img {
+                width: 200px;
+            }
+        }
+    }
+}
