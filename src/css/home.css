@@ -1,12 +1,17 @@
+body {
+  background-color: #f7f7f7; }
+
 .nav {
   position: fixed;
-  height: 60px;
+  height: 70px;
   font-size: 1.3em;
   width: 100vw;
   top: 0;
-  color: #e73d23;
-  background-color: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 0 45px rgba(0, 0, 0, 0.2); }
+  color: #78788c;
+  background-color: #f7f7f7;
+  box-sizing: content-box;
+  transition: all .42s;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); }
   .nav .contain {
     width: 70%;
     margin-left: 15%;
@@ -14,10 +19,24 @@
     align-items: center;
     justify-content: center; }
     .nav .contain img {
-      height: 50px; }
-    .nav .contain h1, .nav .contain h2, .nav .contain ul li {
+      height: 60px; }
+    .nav .contain .logo {
+      width: 7px;
+      height: 7px;
+      margin: 20px 25px 20px 20px;
+      background-color: transparent;
+      border-radius: 50%;
+      box-shadow: 20px 0px 0 0 #9d9db1, 16.18px 11.76px 0 0 #9d9db1, 6.18px 19.02px 0 0 #9d9db1, -6.18px 19.02px 0 0 #9d9db1, -16.18px 11.76px 0 0 #9d9db1, -20px 0px 0 0 #9d9db1, -16.18px -11.76px 0 0 #9d9db1, -6.18px -19.02px 0 0 #9d9db1, 6.18px -19.02px 0 0 #9d9db1, 16.18px -11.75px 0 0 #9d9db1; }
+    .nav .contain h1 {
+      font-size: 2.7em;
+      font-family: 'Dosis';
+      font-family: 'Quicksand', Helvetica, sans-serif;
+      font-family: 'Lato';
+      font-weight: 500;
+      color: #9d9db1; }
+    .nav .contain h2, .nav .contain ul li {
       padding: 0 15px;
-      height: 60px;
+      height: 70px;
       display: flex;
       align-items: center; }
     .nav .contain ul {
@@ -28,14 +47,20 @@
         font-size: 1em; }
         .nav .contain ul li a {
           text-decoration: none;
-          color: inherit; }
+          color: inherit;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          transition: all .22s; }
           .nav .contain ul li a:visited {
             color: inherit; }
+          .nav .contain ul li a:hover {
+            color: #e73d23; }
 
 .landing {
-  margin-top: 60px;
+  margin-top: 70px;
   height: 450px;
-  background: linear-gradient(0deg, #e73d23, #ff7a2d);
+  background: linear-gradient(15deg, #e73d23, #ff7a2d);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -59,61 +84,67 @@
       color: inherit;
       border-radius: 100px; }
 
-.solutions .container {
-  width: 70%;
-  margin-left: 15%;
-  display: grid;
-  padding: 25px 0;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-gap: 25px; }
-  .solutions .container .box {
-    background: white;
-    padding: 30px;
-    border: 8px solid #c3c3c3;
-    border-radius: 6px;
-    transition: all .25s;
-    cursor: pointer; }
-    .solutions .container .box:hover {
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.2); }
-    .solutions .container .box svg {
-      width: 100%; }
-      .solutions .container .box svg .rnd {
-        stroke-linejoin: round;
-        stroke-linecap: round; }
-      .solutions .container .box svg .st0 {
-        fill: none;
-        stroke: #ff7a2d;
-        stroke: #c3c3c3;
-        stroke-width: 2;
-        stroke-miterlimit: 10;
-        stroke-linejoin: round;
-        stroke-linecap: round; }
-      .solutions .container .box svg .st1 {
-        fill: none;
-        stroke: #ff7a2d;
-        stroke: #c3c3c3;
-        stroke-width: 2;
-        stroke-miterlimit: 10;
-        stroke-dasharray: 2,2; }
-      .solutions .container .box svg .st2 {
-        fill: none;
-        stroke: #c3c3c3;
-        stroke-width: 2;
-        stroke-miterlimit: 10;
-        stroke-dasharray: 2,1.8; }
-      .solutions .container .box svg .st6 {
-        fill: none;
-        stroke: #c3c3c3;
-        stroke-width: 2;
-        stroke-miterlimit: 10;
-        stroke-dasharray: 2,1.8; }
-      .solutions .container .box svg path, .solutions .container .box svg rect {
-        fill: #ff7a2d; }
-    .solutions .container .box h2 {
-      margin-top: -30px;
-      margin-bottom: 15px;
-      text-align: center;
-      font-size: 1.8em;
-      color: #3d3d3d; }
-    .solutions .container .box p {
-      color: #3d3d3d; }
+.solutions {
+  background: whitesmoke; }
+  .solutions .container {
+    width: 70%;
+    margin-left: 15%;
+    display: grid;
+    padding: 25px 0;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 25px; }
+    .solutions .container .box {
+      background: white;
+      padding: 30px;
+      border: 8px solid #9d9db1;
+      border-radius: 0;
+      transition: all .42s;
+      color: #9d9db1;
+      cursor: pointer; }
+      .solutions .container .box:hover {
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+        border: 8px solid #78788c;
+        color: #78788c; }
+        .solutions .container .box:hover svg .st0, .solutions .container .box:hover svg .st1, .solutions .container .box:hover svg .st2, .solutions .container .box:hover svg .st6 {
+          stroke: #78788c; }
+      .solutions .container .box svg {
+        width: 100%; }
+        .solutions .container .box svg .st0 {
+          stroke-linejoin: round;
+          stroke-linecap: round; }
+        .solutions .container .box svg .st1 {
+          stroke-dasharray: 2,2; }
+        .solutions .container .box svg .st2 {
+          stroke-dasharray: 2,1.8; }
+        .solutions .container .box svg .st6 {
+          stroke-dasharray: 2,1.8; }
+        .solutions .container .box svg .st0, .solutions .container .box svg .st1, .solutions .container .box svg .st2, .solutions .container .box svg .st6 {
+          fill: none;
+          stroke: #9d9db1;
+          stroke-width: 2;
+          stroke-miterlimit: 10;
+          transition: all .42s; }
+        .solutions .container .box svg path, .solutions .container .box svg rect {
+          fill: #ff7a2d; }
+      .solutions .container .box h2 {
+        margin-top: -30px;
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: bold;
+        color: inherit; }
+      .solutions .container .box p {
+        color: inherit; }
+
+footer {
+  text-align: center;
+  color: #f7f7f7;
+  background-color: #78788c;
+  padding: 65px 0;
+  position: relative; }
+  footer div {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(2deg, #e73d23, #ff7a2d); }

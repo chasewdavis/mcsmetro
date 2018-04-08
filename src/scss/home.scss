@@ -1,14 +1,24 @@
 @import './../utilities/variables.scss';
 
-.nav{
+body {
+    background-color:$white
+}
+
+.nav {
     position: fixed;
     height: $navHeight;
     font-size: 1.3em;
     width: 100vw;
     top: 0;
-    color: $color_dark;
-    background-color: rgba(255,255,255,.95);
-    box-shadow: 0 0 45px rgba(0,0,0,.2);
+    color: $grey;
+    background-color: $white;
+    // border-bottom: 5px solid $color_light;
+    box-sizing: content-box;
+    transition: all .42s;
+    // &:hover{
+    //     border-bottom: 8px solid $grey;
+    // }
+    box-shadow: 0 0 30px rgba(0,0,0,.2);
     .contain{
         width: 70%;
         margin-left: 15%;
@@ -18,7 +28,44 @@
         img {
             height: $navHeight - 10px;
         }
-        h1, h2, ul li{
+        .logo{
+            width: 7px;
+            height: 7px;
+            margin: 20px 25px 20px 20px;
+            background-color: transparent; 
+            border-radius: 50%;
+            box-shadow:
+                // parametric equation for a circle
+                // x = cx + r * cos(a)
+                // y = cy + r * sin(a)
+                // 10 shadows evenly spaced so 360deg / 10 = 36deg
+                20px 0px 0 0 $grey_light, 
+                16.18px 11.76px 0 0 $grey_light, 
+                6.18px 19.02px 0 0 $grey_light, 
+                -6.18px 19.02px 0 0 $grey_light, 
+                -16.18px 11.76px 0 0 $grey_light, 
+                -20px 0px 0 0 $grey_light, 
+                -16.18px -11.76px 0 0 $grey_light, 
+                -6.18px -19.02px 0 0 $grey_light, 
+                6.18px -19.02px 0 0 $grey_light, 
+                16.18px -11.75px 0 0 $grey_light;
+        }
+        h1 {
+            font-size: 2.7em;
+            font-family: 'Dosis';
+            font-family: 'Quicksand', Helvetica, sans-serif;
+            font-family: 'Lato';
+            font-weight: 500;
+            color: $grey_light;
+        }
+        // h2 {
+        //     height: $navHeight;
+        //     display: flex;
+        //     align-items: flex-end;
+        //     padding-bottom: .5em;
+        //     margin-left: 30px;
+        // }
+        h2, ul li{
             padding: 0 15px;
             height: $navHeight;
             display: flex;
@@ -34,8 +81,16 @@
                 a{
                     text-decoration: none;
                     color:inherit;
+                    // border:1px solid red;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    transition: all .22s;
                     &:visited{
                         color:inherit;
+                    }
+                    &:hover{
+                        color:$color_dark;
                     }
                 }
             }
@@ -46,7 +101,7 @@
 .landing{
     margin-top: $navHeight;
     height: 450px;
-    background: linear-gradient(0deg, $color_dark, $color_light);
+    background: linear-gradient(15deg, $color_dark, $color_light);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -77,6 +132,7 @@
 }
 
 .solutions {
+    background: rgb(245, 245, 245);
     .container{
         width: 70%;
         margin-left: 15%;
@@ -89,50 +145,45 @@
             background: white;
             padding: 30px;
             // box-shadow: 0 0 40px rgba(0,0,0,.2);
-            border: 8px solid $grey;
-            border-radius: 6px;
-            transition: all .25s;
+            border: 8px solid $grey_light;
+            border-radius: 0;
+            transition: all .42s;
+            color: $grey_light;
             &:hover{
-                box-shadow: 0 0 40px rgba(0,0,0,.2);
+                box-shadow: 0 0 0 rgba(0,0,0,.2);
+                border: 8px solid $grey;
+                color: $grey;
+                svg{
+                    .st0,.st1,.st2,.st6 {
+                        stroke: $grey;
+                    }
+                }
             }
             cursor: pointer;
             svg {
                 width: 100%;
-                .rnd{
-                    stroke-linejoin:round;
-                    stroke-linecap:round;
-                }
                 .st0{
-                    fill:none;
-                    stroke: $color_light;
-                    stroke: $grey;
-                    stroke-width:2;
-                    stroke-miterlimit:10;
                     stroke-linejoin:round;
                     stroke-linecap:round;
                 }
                 .st1{
-                    fill:none;
-                    stroke:$color_light;
-                    stroke: $grey;
-                    stroke-width:2;
-                    stroke-miterlimit:10;
                     stroke-dasharray:2,2;
                 }
                 .st2{
-                    fill:none;
-                    stroke: $grey;
-                    stroke-width:2;
-                    stroke-miterlimit:10;
                     stroke-dasharray:2,1.8;
                 }
                 .st6{
-                    fill:none;
-                    stroke:$grey;
-                    stroke-width:2;
-                    stroke-miterlimit:10;
+                    
                     stroke-dasharray:2,1.8;
                 }
+                .st0,.st1,.st2,.st6 {
+                    fill:none;
+                    stroke: $grey_light;
+                    stroke-width:2;
+                    stroke-miterlimit:10;
+                    transition: all .42s;
+                }
+
                 // path, rect{
                 //     stroke: rgb(190, 190, 190);
                 //     fill: rgb(190, 190, 190);
@@ -146,12 +197,28 @@
                 margin-bottom: 15px;
                 text-align: center;
                 font-size: 1.8em;
-                color: $color_text;
+                font-weight: bold;
+                color: inherit;
             }
             p {
-                color: $color_text;
+                color: inherit;
             }
         }
+    }
+}
+
+footer{
+    text-align: center;
+    color: $white;
+    background-color: $grey;
+    padding: 65px 0;
+    position: relative;
+    div{
+        position: absolute;
+        bottom: -50px;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(2deg, $color_dark, $color_light);
     }
 }
 
