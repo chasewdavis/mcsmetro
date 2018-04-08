@@ -7,7 +7,7 @@
     width: 100vw;
     top: 0;
     color: $color_dark;
-    background-color: white;
+    background-color: rgba(255,255,255,.95);
     box-shadow: 0 0 45px rgba(0,0,0,.2);
     .contain{
         width: 70%;
@@ -80,12 +80,78 @@
     .container{
         width: 70%;
         margin-left: 15%;
-        border: 1px solid black;
+        // background: whitesmoke;
+        display: grid;
+        padding: 25px 0;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-gap: 25px;
         .box{
+            background: white;
             padding: 30px;
-            img {
-                width: 200px;
+            // box-shadow: 0 0 40px rgba(0,0,0,.2);
+            border: 8px solid $grey;
+            border-radius: 6px;
+            transition: all .25s;
+            &:hover{
+                box-shadow: 0 0 40px rgba(0,0,0,.2);
+            }
+            cursor: pointer;
+            svg {
+                width: 100%;
+                .rnd{
+                    stroke-linejoin:round;
+                    stroke-linecap:round;
+                }
+                .st0{
+                    fill:none;
+                    stroke: $color_light;
+                    stroke: $grey;
+                    stroke-width:2;
+                    stroke-miterlimit:10;
+                    stroke-linejoin:round;
+                    stroke-linecap:round;
+                }
+                .st1{
+                    fill:none;
+                    stroke:$color_light;
+                    stroke: $grey;
+                    stroke-width:2;
+                    stroke-miterlimit:10;
+                    stroke-dasharray:2,2;
+                }
+                .st2{
+                    fill:none;
+                    stroke: $grey;
+                    stroke-width:2;
+                    stroke-miterlimit:10;
+                    stroke-dasharray:2,1.8;
+                }
+                .st6{
+                    fill:none;
+                    stroke:$grey;
+                    stroke-width:2;
+                    stroke-miterlimit:10;
+                    stroke-dasharray:2,1.8;
+                }
+                // path, rect{
+                //     stroke: rgb(190, 190, 190);
+                //     fill: rgb(190, 190, 190);
+                // }
+                path, rect {
+                    fill: $color_light;
+                }
+            }
+            h2 {
+                margin-top: -30px;
+                margin-bottom: 15px;
+                text-align: center;
+                font-size: 1.8em;
+                color: $color_text;
+            }
+            p {
+                color: $color_text;
             }
         }
     }
 }
+
