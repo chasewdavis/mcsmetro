@@ -18,8 +18,8 @@ body {
     // &:hover{
     //     border-bottom: 8px solid $grey;
     // }
-    box-shadow: 0 0 30px rgba(0,0,0,.2);
-    .contain{
+    box-shadow: 0 0 30px $shadow_light;
+    .contain {
         width: 70%;
         margin-left: 15%;
         display: flex;
@@ -107,7 +107,7 @@ body {
     justify-content: space-around;
     align-items: center;
     color: white;
-    .container{
+    .contain{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -121,39 +121,47 @@ body {
             font-size: 1.8em;
             padding: 15px 40px;
             background: rgba(0,0,0,0);
-            // box-shadow: ;
             border: 3px solid white;
-            font-weight: 300;
+            font-weight: 400;
             letter-spacing: .1em;
             color:inherit;
             border-radius: 100px;
+            transition: all .30s;
+            &:hover{
+                // background: $color_dark;
+                box-shadow: 0 0 40px rgba(250,250,250,.6);
+                // border:none;
+                // color: $white;
+            }
         }
     }  
 }
 
 .solutions {
     background: rgb(245, 245, 245);
-    .container{
+    .contain{
         width: 70%;
         margin-left: 15%;
         // background: whitesmoke;
         display: grid;
         padding: 25px 0;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         grid-gap: 25px;
         .box{
             background: white;
-            padding: 30px;
-            // box-shadow: 0 0 40px rgba(0,0,0,.2);
-            border: 8px solid $grey_light;
-            border-radius: 0;
+            padding: 40px 30px 30px 30px;
+            box-shadow: 0 0 20px $shadow_light;
+            // border: 6px solid $grey_light;
+            border-radius: 7px;
             transition: all .42s;
             color: $grey_light;
             &:hover{
-                box-shadow: 0 0 0 rgba(0,0,0,.2);
-                border: 8px solid $grey;
+                box-shadow: 0 0 28px $shadow;
+                // box-shadow: none;
+                // border: 6px solid $grey;
                 color: $grey;
                 svg{
+                    // transform: scale(.8);
                     .st0,.st1,.st2,.st6 {
                         stroke: $grey;
                     }
@@ -161,7 +169,9 @@ body {
             }
             cursor: pointer;
             svg {
-                width: 100%;
+                // transform: scale(.75);
+                width: 75%;
+                margin-left: 12.5%;
                 .st0{
                     stroke-linejoin:round;
                     stroke-linecap:round;
@@ -193,8 +203,8 @@ body {
                 }
             }
             h2 {
-                margin-top: -30px;
-                margin-bottom: 15px;
+                margin-top: -15px;
+                margin-bottom: 18px;
                 text-align: center;
                 font-size: 1.8em;
                 font-weight: bold;
@@ -222,3 +232,25 @@ footer{
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    .nav {
+        .contain {
+            width: 100%;
+            margin-left: 0;
+            padding: 0 25px;
+        }
+    }
+    .landing {
+        .contain {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    .solutions{
+        .contain {
+            width: 100%;
+            margin-left: 0;
+            padding: 25px 25px;
+        }
+    }
+}

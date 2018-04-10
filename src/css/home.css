@@ -11,7 +11,7 @@ body {
   background-color: #f7f7f7;
   box-sizing: content-box;
   transition: all .42s;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0 30px rgba(120, 120, 170, 0.2); }
   .nav .contain {
     width: 70%;
     margin-left: 15%;
@@ -66,74 +66,77 @@ body {
   justify-content: space-around;
   align-items: center;
   color: white; }
-  .landing .container {
+  .landing .contain {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     height: 50%; }
-    .landing .container h1 {
+    .landing .contain h1 {
       font-size: 2.3em; }
-    .landing .container button {
+    .landing .contain button {
       font-size: 1.8em;
       padding: 15px 40px;
       background: transparent;
       border: 3px solid white;
-      font-weight: 300;
+      font-weight: 400;
       letter-spacing: .1em;
       color: inherit;
-      border-radius: 100px; }
+      border-radius: 100px;
+      transition: all .30s; }
+      .landing .contain button:hover {
+        box-shadow: 0 0 40px rgba(250, 250, 250, 0.6); }
 
 .solutions {
   background: whitesmoke; }
-  .solutions .container {
+  .solutions .contain {
     width: 70%;
     margin-left: 15%;
     display: grid;
     padding: 25px 0;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     grid-gap: 25px; }
-    .solutions .container .box {
+    .solutions .contain .box {
       background: white;
-      padding: 30px;
-      border: 8px solid #9d9db1;
-      border-radius: 0;
+      padding: 40px 30px 30px 30px;
+      box-shadow: 0 0 20px rgba(120, 120, 170, 0.2);
+      border-radius: 7px;
       transition: all .42s;
       color: #9d9db1;
       cursor: pointer; }
-      .solutions .container .box:hover {
-        box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
-        border: 8px solid #78788c;
+      .solutions .contain .box:hover {
+        box-shadow: 0 0 28px rgba(110, 110, 145, 0.45);
         color: #78788c; }
-        .solutions .container .box:hover svg .st0, .solutions .container .box:hover svg .st1, .solutions .container .box:hover svg .st2, .solutions .container .box:hover svg .st6 {
+        .solutions .contain .box:hover svg .st0, .solutions .contain .box:hover svg .st1, .solutions .contain .box:hover svg .st2, .solutions .contain .box:hover svg .st6 {
           stroke: #78788c; }
-      .solutions .container .box svg {
-        width: 100%; }
-        .solutions .container .box svg .st0 {
+      .solutions .contain .box svg {
+        width: 75%;
+        margin-left: 12.5%; }
+        .solutions .contain .box svg .st0 {
           stroke-linejoin: round;
           stroke-linecap: round; }
-        .solutions .container .box svg .st1 {
+        .solutions .contain .box svg .st1 {
           stroke-dasharray: 2,2; }
-        .solutions .container .box svg .st2 {
+        .solutions .contain .box svg .st2 {
           stroke-dasharray: 2,1.8; }
-        .solutions .container .box svg .st6 {
+        .solutions .contain .box svg .st6 {
           stroke-dasharray: 2,1.8; }
-        .solutions .container .box svg .st0, .solutions .container .box svg .st1, .solutions .container .box svg .st2, .solutions .container .box svg .st6 {
+        .solutions .contain .box svg .st0, .solutions .contain .box svg .st1, .solutions .contain .box svg .st2, .solutions .contain .box svg .st6 {
           fill: none;
           stroke: #9d9db1;
           stroke-width: 2;
           stroke-miterlimit: 10;
           transition: all .42s; }
-        .solutions .container .box svg path, .solutions .container .box svg rect {
+        .solutions .contain .box svg path, .solutions .contain .box svg rect {
           fill: #ff7a2d; }
-      .solutions .container .box h2 {
-        margin-top: -30px;
-        margin-bottom: 15px;
+      .solutions .contain .box h2 {
+        margin-top: -15px;
+        margin-bottom: 18px;
         text-align: center;
         font-size: 1.8em;
         font-weight: bold;
         color: inherit; }
-      .solutions .container .box p {
+      .solutions .contain .box p {
         color: inherit; }
 
 footer {
@@ -148,3 +151,16 @@ footer {
     width: 100%;
     height: 50px;
     background: linear-gradient(2deg, #e73d23, #ff7a2d); }
+
+@media only screen and (max-width: 1200px) {
+  .nav .contain {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 25px; }
+  .landing .contain {
+    width: 100%;
+    margin-left: 0; }
+  .solutions .contain {
+    width: 100%;
+    margin-left: 0;
+    padding: 25px 25px; } }
