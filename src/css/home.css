@@ -1,9 +1,28 @@
-body {
-  background-color: #f7f7f7; }
+.contain {
+  width: 70%;
+  margin-left: 15%; }
+
+.phone {
+  color: white;
+  background: #78788c;
+  background: linear-gradient(2deg, #323250, #78788c, #9d9db1);
+  font-size: 1.3em;
+  z-index: 2; }
+  .phone .contain {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px; }
+    .phone .contain svg {
+      margin-bottom: -5px;
+      width: 20px; }
+      .phone .contain svg path {
+        fill: white; }
+    .phone .contain h1 {
+      margin-left: 15px; }
 
 .nav {
   position: fixed;
-  height: 70px;
+  position: sticky;
   font-size: 1.3em;
   width: 100vw;
   top: 0;
@@ -13,32 +32,32 @@ body {
   transition: all .42s;
   box-shadow: 0 0 30px rgba(120, 120, 170, 0.2); }
   .nav .contain {
-    width: 70%;
-    margin-left: 15%;
     display: flex;
     align-items: center;
-    justify-content: center; }
-    .nav .contain img {
-      height: 60px; }
-    .nav .contain .logo {
-      width: 7px;
-      height: 7px;
-      margin: 20px 25px 20px 20px;
-      background-color: transparent;
-      border-radius: 50%;
-      box-shadow: 20px 0px 0 0 #9d9db1, 16.18px 11.76px 0 0 #9d9db1, 6.18px 19.02px 0 0 #9d9db1, -6.18px 19.02px 0 0 #9d9db1, -16.18px 11.76px 0 0 #9d9db1, -20px 0px 0 0 #9d9db1, -16.18px -11.76px 0 0 #9d9db1, -6.18px -19.02px 0 0 #9d9db1, 6.18px -19.02px 0 0 #9d9db1, 16.18px -11.75px 0 0 #9d9db1; }
-    .nav .contain h1 {
-      font-size: 2.7em;
-      font-family: 'Dosis';
-      font-family: 'Quicksand', Helvetica, sans-serif;
-      font-family: 'Lato';
-      font-weight: 500;
-      color: #9d9db1; }
+    justify-content: space-between; }
+    .nav .contain .logo_parent {
+      display: flex;
+      align-items: center;
+      height: 70px; }
+      .nav .contain .logo_parent .logo {
+        width: 7px;
+        height: 7px;
+        margin: 20px 25px 20px 20px;
+        background-color: transparent;
+        border-radius: 50%;
+        box-shadow: 20px 0px 0 0 #78788c, 16.18px 11.76px 0 0 #78788c, 6.18px 19.02px 0 0 #78788c, -6.18px 19.02px 0 0 #78788c, -16.18px 11.76px 0 0 #78788c, -20px 0px 0 0 #78788c, -16.18px -11.76px 0 0 #78788c, -6.18px -19.02px 0 0 #78788c, 6.18px -19.02px 0 0 #78788c, 16.18px -11.75px 0 0 #78788c; }
+      .nav .contain .logo_parent h1 {
+        font-size: 2.7em;
+        font-family: 'Dosis';
+        font-family: 'Quicksand', Helvetica, sans-serif;
+        font-family: 'Lato';
+        font-weight: 500; }
     .nav .contain h2, .nav .contain ul li {
       padding: 0 15px;
       height: 70px;
       display: flex;
-      align-items: center; }
+      align-items: center;
+      color: #78788c; }
     .nav .contain ul {
       margin-left: auto;
       list-style: none;
@@ -56,42 +75,69 @@ body {
             color: inherit; }
           .nav .contain ul li a:hover {
             color: #e73d23; }
+    .nav .contain button {
+      display: none;
+      height: 70px;
+      border: none;
+      background: transparent;
+      padding: 0; }
+      .nav .contain button .drop {
+        width: 50px;
+        height: 4px;
+        background: #78788c;
+        border: none;
+        border-radius: 3px;
+        box-shadow: 0 12px 0 #78788c, 0 -12px 0 #78788c; }
 
 .landing {
-  margin-top: 70px;
   height: 450px;
-  background: linear-gradient(15deg, #e73d23, #ff7a2d);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  color: white; }
-  .landing .contain {
+  background: linear-gradient(15deg, #e73d23, #ff7a2d); }
+  .landing .cover {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 50%; }
-    .landing .contain h1 {
-      font-size: 2.3em; }
-    .landing .contain button {
-      font-size: 1.8em;
-      padding: 15px 40px;
-      background: transparent;
-      border: 3px solid white;
-      font-weight: 400;
-      letter-spacing: .1em;
-      color: inherit;
-      border-radius: 100px;
-      transition: all .30s; }
-      .landing .contain button:hover {
-        box-shadow: 0 0 40px rgba(250, 250, 250, 0.6); }
+    color: white; }
+    .landing .cover .contain {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 50%;
+      text-align: center; }
+      .landing .cover .contain h1 {
+        font-size: 2.3em; }
+      .landing .cover .contain h2 {
+        font-size: 1.8em; }
+      .landing .cover .contain .btns {
+        display: flex;
+        align-items: center; }
+        .landing .cover .contain .btns button {
+          width: 7em;
+          font-size: 1.8em;
+          padding: 15px 40px;
+          background: transparent;
+          border: 3px solid white;
+          border: 3px solid #78788c;
+          border: none;
+          font-weight: 400;
+          letter-spacing: .1em;
+          color: inherit;
+          transition: all .30s; }
+          .landing .cover .contain .btns button:hover {
+            box-shadow: 0 0 40px rgba(250, 250, 250, 0.6);
+            box-shadow: 0 0 40px rgba(110, 110, 145, 0.45);
+            background: white; }
+        .landing .cover .contain .btns h2 {
+          font-size: 2em;
+          margin: 0 20px; }
 
 .solutions {
   background: whitesmoke; }
   .solutions .contain {
-    width: 70%;
-    margin-left: 15%;
     display: grid;
     padding: 25px 0;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -105,7 +151,7 @@ body {
       color: #9d9db1;
       cursor: pointer; }
       .solutions .contain .box:hover {
-        box-shadow: 0 0 28px rgba(110, 110, 145, 0.45);
+        box-shadow: 0 0 38px rgba(110, 110, 145, 0.45);
         color: #78788c; }
         .solutions .contain .box:hover svg .st0, .solutions .contain .box:hover svg .st1, .solutions .contain .box:hover svg .st2, .solutions .contain .box:hover svg .st6 {
           stroke: #78788c; }
@@ -153,14 +199,19 @@ footer {
     background: linear-gradient(2deg, #e73d23, #ff7a2d); }
 
 @media only screen and (max-width: 1200px) {
-  .nav .contain {
-    width: 100%;
-    margin-left: 0;
-    padding: 0 25px; }
-  .landing .contain {
+  .contain {
     width: 100%;
     margin-left: 0; }
+  .nav .contain {
+    padding: 0 15px; }
   .solutions .contain {
-    width: 100%;
-    margin-left: 0;
     padding: 25px 25px; } }
+
+@media only screen and (max-width: 1024px) {
+  .nav .contain ul {
+    display: none; }
+  .nav .contain button {
+    display: inline; }
+  .solutions .contain {
+    grid-gap: 15px;
+    padding: 15px; } }
