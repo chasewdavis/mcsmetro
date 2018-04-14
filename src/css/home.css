@@ -1,4 +1,4 @@
-.contain {
+.contain, .solutions > .header {
   width: 70%;
   margin-left: 15%; }
 
@@ -91,7 +91,9 @@
 
 .landing {
   height: 450px;
-  background: linear-gradient(15deg, #e73d23, #ff7a2d); }
+  background-size: cover;
+  background: linear-gradient(15deg, #ff4225, #ff922d) fixed;
+  background-position: fixed; }
   .landing .cover {
     width: 100%;
     height: 100%;
@@ -122,21 +124,35 @@
           background: transparent;
           border: 3px solid white;
           border: 3px solid #78788c;
-          border: none;
+          border: 3px solid white;
           font-weight: 400;
           letter-spacing: .1em;
           color: inherit;
+          border-radius: 100px;
           transition: all .30s; }
           .landing .cover .contain .btns button:hover {
-            box-shadow: 0 0 40px rgba(250, 250, 250, 0.6);
-            box-shadow: 0 0 40px rgba(110, 110, 145, 0.45);
-            background: white; }
+            box-shadow: 0 0 40px rgba(250, 250, 250, 0.6); }
         .landing .cover .contain .btns h2 {
           font-size: 2em;
           margin: 0 20px; }
 
 .solutions {
   background: whitesmoke; }
+  .solutions > .header {
+    padding: 25px;
+    background: white;
+    box-shadow: 0 0 20px rgba(120, 120, 170, 0.2);
+    border-radius: 7px;
+    color: #9d9db1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .solutions > .header:nth-child(1) {
+      margin-top: 25px; }
+    .solutions > .header h1 {
+      font-size: 2.4em; }
+    .solutions > .header h2 {
+      font-size: 1.8em; }
   .solutions .contain {
     display: grid;
     padding: 25px 0;
@@ -204,6 +220,11 @@ footer {
     margin-left: 0; }
   .nav .contain {
     padding: 0 15px; }
+  .solutions > .header {
+    width: calc(100% - 50px);
+    margin: 0 25px; }
+    .solutions > .header:nth-child(1) {
+      margin: 25px 25px 0 25px; }
   .solutions .contain {
     padding: 25px 25px; } }
 
@@ -212,6 +233,18 @@ footer {
     display: none; }
   .nav .contain button {
     display: inline; }
+  .solutions > .header {
+    width: calc(100% - 30px);
+    margin: 0 15px;
+    padding: 15px;
+    flex-direction: column; }
+    .solutions > .header:nth-child(1) {
+      margin: 15px 15px 0 15px; }
+    .solutions > .header h1 {
+      margin-bottom: 15px;
+      align-self: flex-start; }
+    .solutions > .header h2 {
+      align-self: flex-end; }
   .solutions .contain {
     grid-gap: 15px;
     padding: 15px; } }
