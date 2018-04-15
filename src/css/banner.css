@@ -1,0 +1,68 @@
+.landing {
+  position: relative;
+  height: 550px;
+  background-size: cover;
+  background: linear-gradient(15deg, #ff4225, #ff7a2d) fixed;
+  z-index: 2; }
+  .landing .cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    overflow: hidden; }
+    .landing .cover .logo_large {
+      left: 0;
+      margin-left: 215px;
+      position: absolute;
+      top: 215px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      box-shadow: 275px 0 20px 0 rgba(255, 255, 255, 0.1), -275px 0 20px 0 rgba(255, 255, 255, 0.1); }
+      .landing .cover .logo_large:nth-child(1) {
+        transform: rotate(0deg); }
+      .landing .cover .logo_large:nth-child(2) {
+        transform: rotate(36deg); }
+      .landing .cover .logo_large:nth-child(3) {
+        transform: rotate(72deg); }
+      .landing .cover .logo_large:nth-child(4) {
+        transform: rotate(108deg); }
+      .landing .cover .logo_large:nth-child(5) {
+        transform: rotate(144deg); }
+    .landing .cover .contain {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 55%;
+      text-align: center; }
+      .landing .cover .contain h1 {
+        font-size: 2.3em; }
+      .landing .cover .contain h2 {
+        font-size: 1.8em; }
+      .landing .cover .contain .btns {
+        display: flex;
+        align-items: center; }
+        .landing .cover .contain .btns button {
+          width: 7em;
+          font-size: 1.8em;
+          padding: 15px 40px;
+          background: transparent;
+          border: 3px solid white;
+          border: 3px solid #78788c;
+          border: 3px solid white;
+          font-weight: 400;
+          letter-spacing: .1em;
+          color: inherit;
+          border-radius: 100px;
+          transition: all .30s; }
+          .landing .cover .contain .btns button:hover {
+            box-shadow: 0 0 40px rgba(250, 250, 250, 0.6); }
+        .landing .cover .contain .btns h2 {
+          font-size: 2em;
+          margin: 0 20px; }

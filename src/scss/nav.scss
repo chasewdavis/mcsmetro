@@ -1,0 +1,124 @@
+@import './../utilities/variables.scss';
+
+.nav {
+    position: fixed;
+    position: sticky; // site looks great even if browser can't read this. 
+    // height: $navHeight;
+    font-size: 1.3em;
+    width: 100vw;
+    top: 0;
+    color: $grey;
+    background-color: rgba(0,0,0,0);
+    background-color: $white;
+    box-sizing: content-box;
+    transition: all .42s;
+    // box-shadow: 0 0 30px $shadow_light;
+    z-index: 5;
+    .contain {
+        // width: 70%;
+        // margin-left: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // img {
+        //     height: $navHeight - 10px;
+        // }
+        .logo_parent {
+            display: flex;
+            align-items: center;
+            height: $navHeight;
+            .logo{
+                width: 7px;
+                height: 7px;
+                margin: 20px 25px 20px 20px;
+                background-color: transparent; 
+                // background-color: red;
+
+                border-radius: 50%;
+                box-shadow:
+                    20px 0px 0 0 $grey, 
+                    16.18px 11.76px 0 0 $grey, 
+                    6.18px 19.02px 0 0 $grey, 
+                    -6.18px 19.02px 0 0 $grey, 
+                    -16.18px 11.76px 0 0 $grey, 
+                    -20px 0px 0 0 $grey, 
+                    -16.18px -11.76px 0 0 $grey, 
+                    -6.18px -19.02px 0 0 $grey, 
+                    6.18px -19.02px 0 0 $grey, 
+                    16.18px -11.75px 0 0 $grey;
+            }
+            h1 {
+                font-size: 2.7em;
+                font-family: 'Dosis';
+                font-family: 'Quicksand', Helvetica, sans-serif;
+                font-family: 'Lato';
+                font-weight: 500;
+                // color: $grey;
+            }
+        }
+        // h2 {
+        //     height: $navHeight;
+        //     display: flex;
+        //     align-items: flex-end;
+        //     padding-bottom: .5em;
+        //     margin-left: 30px;
+        // }
+        h2, ul li{
+            padding: 0 15px;
+            height: $navHeight;
+            display: flex;
+            align-items: center;
+            color: $grey;
+        }
+        ul{
+            margin-left: auto;
+            list-style: none;
+            display: flex;
+            li{
+                font-size: 1em;
+                // padding: 15px 10px;
+                a{
+                    text-decoration: none;
+                    color:inherit;
+                    // border:1px solid red;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    transition: all .22s;
+                    &:visited{
+                        color:inherit;
+                    }
+                    &:hover{
+                        color:$color_dark;
+                    }
+                }
+            }
+        }
+        button{
+            display: none;
+            height: $navHeight;
+            border: none;
+            background: transparent;
+            padding: 0;
+            .drop {
+                width: 50px;
+                height: 4px;
+                background: $grey;
+                border: none;
+                border-radius: 3px;
+                box-shadow: 0 12px 0 $grey, 0 -12px 0 $grey;
+            }
+        }
+    }
+}
+
+.nav_bottom {
+    background: linear-gradient(10deg, $color, $color_light, $color);
+    // background: $grey;
+    margin-top: - $navHeight;
+    height: $navHeight;
+    position: sticky; // still looks good even if browser can not support
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 0 20px $shadow;
+}

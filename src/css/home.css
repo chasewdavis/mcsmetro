@@ -20,139 +20,21 @@
     .phone .contain h1 {
       margin-left: 15px; }
 
-.nav {
-  position: fixed;
-  position: sticky;
-  font-size: 1.3em;
-  width: 100vw;
-  top: 0;
-  color: #78788c;
-  background-color: #f7f7f7;
-  box-sizing: content-box;
-  transition: all .42s;
-  box-shadow: 0 0 30px rgba(120, 120, 170, 0.2); }
-  .nav .contain {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; }
-    .nav .contain .logo_parent {
-      display: flex;
-      align-items: center;
-      height: 70px; }
-      .nav .contain .logo_parent .logo {
-        width: 7px;
-        height: 7px;
-        margin: 20px 25px 20px 20px;
-        background-color: transparent;
-        border-radius: 50%;
-        box-shadow: 20px 0px 0 0 #78788c, 16.18px 11.76px 0 0 #78788c, 6.18px 19.02px 0 0 #78788c, -6.18px 19.02px 0 0 #78788c, -16.18px 11.76px 0 0 #78788c, -20px 0px 0 0 #78788c, -16.18px -11.76px 0 0 #78788c, -6.18px -19.02px 0 0 #78788c, 6.18px -19.02px 0 0 #78788c, 16.18px -11.75px 0 0 #78788c; }
-      .nav .contain .logo_parent h1 {
-        font-size: 2.7em;
-        font-family: 'Dosis';
-        font-family: 'Quicksand', Helvetica, sans-serif;
-        font-family: 'Lato';
-        font-weight: 500; }
-    .nav .contain h2, .nav .contain ul li {
-      padding: 0 15px;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      color: #78788c; }
-    .nav .contain ul {
-      margin-left: auto;
-      list-style: none;
-      display: flex; }
-      .nav .contain ul li {
-        font-size: 1em; }
-        .nav .contain ul li a {
-          text-decoration: none;
-          color: inherit;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          transition: all .22s; }
-          .nav .contain ul li a:visited {
-            color: inherit; }
-          .nav .contain ul li a:hover {
-            color: #e73d23; }
-    .nav .contain button {
-      display: none;
-      height: 70px;
-      border: none;
-      background: transparent;
-      padding: 0; }
-      .nav .contain button .drop {
-        width: 50px;
-        height: 4px;
-        background: #78788c;
-        border: none;
-        border-radius: 3px;
-        box-shadow: 0 12px 0 #78788c, 0 -12px 0 #78788c; }
-
-.landing {
-  height: 450px;
-  background-size: cover;
-  background: linear-gradient(15deg, #ff4225, #ff922d) fixed;
-  background-position: fixed; }
-  .landing .cover {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    color: white; }
-    .landing .cover .contain {
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      height: 50%;
-      text-align: center; }
-      .landing .cover .contain h1 {
-        font-size: 2.3em; }
-      .landing .cover .contain h2 {
-        font-size: 1.8em; }
-      .landing .cover .contain .btns {
-        display: flex;
-        align-items: center; }
-        .landing .cover .contain .btns button {
-          width: 7em;
-          font-size: 1.8em;
-          padding: 15px 40px;
-          background: transparent;
-          border: 3px solid white;
-          border: 3px solid #78788c;
-          border: 3px solid white;
-          font-weight: 400;
-          letter-spacing: .1em;
-          color: inherit;
-          border-radius: 100px;
-          transition: all .30s; }
-          .landing .cover .contain .btns button:hover {
-            box-shadow: 0 0 40px rgba(250, 250, 250, 0.6); }
-        .landing .cover .contain .btns h2 {
-          font-size: 2em;
-          margin: 0 20px; }
-
 .solutions {
   background: whitesmoke; }
   .solutions > .header {
-    padding: 25px;
-    background: white;
-    box-shadow: 0 0 20px rgba(120, 120, 170, 0.2);
     border-radius: 7px;
     color: #9d9db1;
     display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    flex-direction: column;
+    align-items: flex-start; }
     .solutions > .header:nth-child(1) {
       margin-top: 25px; }
     .solutions > .header h1 {
-      font-size: 2.4em; }
+      font-size: 2.4em;
+      margin-bottom: 10px; }
     .solutions > .header h2 {
-      font-size: 1.8em; }
+      font-size: 1.4em; }
   .solutions .contain {
     display: grid;
     padding: 25px 0;
@@ -203,7 +85,7 @@
 
 footer {
   text-align: center;
-  color: #f7f7f7;
+  color: whitesmoke;
   background-color: #78788c;
   padding: 65px 0;
   position: relative; }

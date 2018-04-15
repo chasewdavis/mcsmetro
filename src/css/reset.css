@@ -33,6 +33,7 @@ footer, header, hgroup, menu, nav, section {
 
 button {
   cursor: pointer;
+  outline: none;
 }
 
 svg text{
