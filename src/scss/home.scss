@@ -85,6 +85,9 @@
                     .st0,.st1,.st2,.st6 {
                         stroke: $grey;
                     }
+                    .strokes_only {
+                        fill: $grey;
+                    }
                 }
             }
             cursor: pointer;
@@ -103,7 +106,6 @@
                     stroke-dasharray:2,1.8;
                 }
                 .st6{
-                    
                     stroke-dasharray:2,1.8;
                 }
                 .st0,.st1,.st2,.st6 {
@@ -114,13 +116,18 @@
                     transition: all .42s;
                 }
 
+                .strokes_only {
+                    fill: $grey_light;
+                    transition: all .42s;
+                }
+
                 // path, rect{
                 //     stroke: rgb(190, 190, 190);
                 //     fill: rgb(190, 190, 190);
                 // }
-                path, rect {
-                    fill: $color_light;
-                }
+                // path, rect {
+                //     // fill: $color_light;
+                // }
             }
             h2 {
                 margin-top: -15px;

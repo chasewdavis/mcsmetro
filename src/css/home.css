@@ -53,6 +53,8 @@
         color: #78788c; }
         .solutions .contain .box:hover svg .st0, .solutions .contain .box:hover svg .st1, .solutions .contain .box:hover svg .st2, .solutions .contain .box:hover svg .st6 {
           stroke: #78788c; }
+        .solutions .contain .box:hover svg .strokes_only {
+          fill: #78788c; }
       .solutions .contain .box svg {
         width: 75%;
         margin-left: 12.5%; }
@@ -71,8 +73,9 @@
           stroke-width: 2;
           stroke-miterlimit: 10;
           transition: all .42s; }
-        .solutions .contain .box svg path, .solutions .contain .box svg rect {
-          fill: #ff7a2d; }
+        .solutions .contain .box svg .strokes_only {
+          fill: #9d9db1;
+          transition: all .42s; }
       .solutions .contain .box h2 {
         margin-top: -15px;
         margin-bottom: 18px;
