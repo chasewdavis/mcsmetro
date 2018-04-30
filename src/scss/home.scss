@@ -35,7 +35,6 @@
 
 .solutions {
     background: white;
-    padding-top: 25px;
 
     & > .header {
         // padding-top: 20px;
@@ -88,17 +87,30 @@
                 }
             }
             h2 {
+                transition: inherit;
                 position: relative;
                 margin-top: 10px;
                 margin-bottom: 18px;
                 text-align: center;
                 font-size: 1.8em;
                 font-weight: bold;
-                color: inherit;
+                color: inherit; // fallback
+                padding-bottom: 2px; // prevents cutoff
+                background: linear-gradient(50deg, $color, $color_lighter);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+                filter: grayscale(100%);
             }
             p {
-                // transition: all .42s;
-                color: inherit;
+                color: inherit; // fallback
+                padding-bottom: 2px; // prevents cutoff
+                transition: inherit;
+                background: linear-gradient(50deg, $color, $color_lighter);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+                background-clip: text;
+                filter: grayscale(100%);
             }
             &:hover{
                 color: $color;
@@ -107,12 +119,11 @@
                     filter: grayscale(0%);
                 }
                 h2{
-                    &:after{
-                        opacity: 0;
-                    }
+                    filter: grayscale(0%);
                 }
                 p {
                     color: $color;
+                    filter: grayscale(0%);
                 }
             }
         }

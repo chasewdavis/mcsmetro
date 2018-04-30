@@ -21,8 +21,7 @@
       margin-left: 15px; }
 
 .solutions {
-  background: white;
-  padding-top: 25px; }
+  background: white; }
   .solutions > .header {
     border-radius: 7px;
     color: #9d9db1;
@@ -59,23 +58,38 @@
           stroke-linecap: round;
           stroke-width: 2.1; }
       .solutions .contain .box h2 {
+        transition: inherit;
         position: relative;
         margin-top: 10px;
         margin-bottom: 18px;
         text-align: center;
         font-size: 1.8em;
         font-weight: bold;
-        color: inherit; }
+        color: inherit;
+        padding-bottom: 2px;
+        background: linear-gradient(50deg, #ff5e00, #ffa617);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        filter: grayscale(100%); }
       .solutions .contain .box p {
-        color: inherit; }
+        color: inherit;
+        padding-bottom: 2px;
+        transition: inherit;
+        background: linear-gradient(50deg, #ff5e00, #ffa617);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        filter: grayscale(100%); }
       .solutions .contain .box:hover {
         color: #ff5e00; }
         .solutions .contain .box:hover svg {
           filter: grayscale(0%); }
-        .solutions .contain .box:hover h2:after {
-          opacity: 0; }
+        .solutions .contain .box:hover h2 {
+          filter: grayscale(0%); }
         .solutions .contain .box:hover p {
-          color: #ff5e00; }
+          color: #ff5e00;
+          filter: grayscale(0%); }
 
 footer {
   text-align: center;
