@@ -9,7 +9,7 @@
     top: 0;
     color: $grey;
     background-color: rgba(0,0,0,0);
-    background-color: $white;
+    background-color: white;
     box-sizing: content-box;
     transition: all .42s;
     // box-shadow: 0 0 30px $shadow_light;
@@ -113,12 +113,13 @@
 }
 
 .nav_bottom {
-    background: linear-gradient(10deg, $color, $color_light, $color);
+    // background: linear-gradient(10deg, $color, $color_light, $color);
     // background: $grey;
+    background: $off_white;
     margin-top: - $navHeight;
-    height: $navHeight;
+    height: $navHeight + 4px;
     position: sticky; // still looks good even if browser can not support
     top: 0;
     z-index: 1;
-    box-shadow: 0 0 20px $shadow;
+    // box-shadow: 0 0 20px $shadow;
 }

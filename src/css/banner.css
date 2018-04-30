@@ -1,8 +1,8 @@
 .landing {
   position: relative;
-  height: 550px;
+  height: 450px;
   background-size: cover;
-  background: linear-gradient(15deg, #ff4225, #ff7a2d) fixed;
+  background: linear-gradient(2deg, #f2f2f2, whitesmoke);
   z-index: 2; }
   .landing .cover {
     position: relative;
@@ -13,6 +13,7 @@
     justify-content: space-around;
     align-items: center;
     color: white;
+    color: #78788c;
     overflow: hidden; }
     .landing .cover .logo_large {
       left: 0;
@@ -55,7 +56,6 @@
           background: transparent;
           border: 3px solid white;
           border: 3px solid #78788c;
-          border: 3px solid white;
           font-weight: 400;
           letter-spacing: .1em;
           color: inherit;

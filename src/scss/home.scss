@@ -34,12 +34,10 @@
 }
 
 .solutions {
-    background: rgb(245, 245, 245);
+    background: white;
+    padding-top: 25px;
 
     & > .header {
-        &:nth-child(1) {
-            margin-top: 25px;
-        }
         // padding-top: 20px;
         // background: white;
         // box-shadow: 0 0 20px $shadow_light;
@@ -62,75 +60,36 @@
     .contain {
         // width: 70%;
         // margin-left: 15%;
-        // background: whitesmoke;
         display: grid;
         padding: 25px 0;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         grid-gap: 25px;
         .box{
+            position: relative;
             background: white;
-            padding: 40px 30px 30px 30px;
-            box-shadow: 0 0 20px $shadow_light;
+            padding: 50px 30px 30px 30px;
+            // box-shadow: 6px 8px 22px $shadow_light;
             // border: 6px solid $grey_light;
-            border-radius: 7px;
+            border: 5px solid $off_white;
+            border-radius: 3px;
             transition: all .42s;
             color: $grey_light;
-            &:hover{
-                box-shadow: 0 0 38px $shadow;
-                // box-shadow: none;
-                // border: 6px solid $grey;
-                color: $grey;
-                svg{
-                    // transform: scale(.8);
-                    .st0,.st1,.st2,.st6 {
-                        stroke: $grey;
-                    }
-                    .strokes_only {
-                        fill: $grey;
-                    }
-                }
-            }
             cursor: pointer;
             svg {
-                // transform: scale(.75);
-                width: 75%;
-                margin-left: 12.5%;
-                .st0{
-                    stroke-linejoin:round;
-                    stroke-linecap:round;
-                }
-                .st1{
-                    stroke-dasharray:2,2;
-                }
-                .st2{
-                    stroke-dasharray:2,1.8;
-                }
-                .st6{
-                    stroke-dasharray:2,1.8;
-                }
-                .st0,.st1,.st2,.st6 {
+                width: 65%;
+                margin-left: 17.5%;
+                transition: all .42s;
+                filter: grayscale(100%);
+                path {
                     fill:none;
-                    stroke: $grey_light;
-                    stroke-width:2;
-                    stroke-miterlimit:10;
-                    transition: all .42s;
+                    stroke-linejoin: round;
+                    stroke-linecap: round;
+                    stroke-width: 2.1;
                 }
-
-                .strokes_only {
-                    fill: $grey_light;
-                    transition: all .42s;
-                }
-
-                // path, rect{
-                //     stroke: rgb(190, 190, 190);
-                //     fill: rgb(190, 190, 190);
-                // }
-                // path, rect {
-                //     // fill: $color_light;
-                // }
             }
             h2 {
-                margin-top: -15px;
+                position: relative;
+                margin-top: 10px;
                 margin-bottom: 18px;
                 text-align: center;
                 font-size: 1.8em;
@@ -138,7 +97,23 @@
                 color: inherit;
             }
             p {
+                // transition: all .42s;
                 color: inherit;
+            }
+            &:hover{
+                color: $color;
+                // border: 5px solid $grey_light;
+                svg{
+                    filter: grayscale(0%);
+                }
+                h2{
+                    &:after{
+                        opacity: 0;
+                    }
+                }
+                p {
+                    color: $color;
+                }
             }
         }
     }
@@ -146,8 +121,9 @@
 
 footer{
     text-align: center;
-    color: $white;
-    background-color: $grey;
+    background: linear-gradient(2deg, $off_white, $white);
+    // border-top: 5px solid $off_white;
+    color: $grey;
     padding: 65px 0;
     position: relative;
     div{
@@ -156,6 +132,7 @@ footer{
         width: 100%;
         height: 50px;
         background: linear-gradient(2deg, $color_dark, $color_light);
+        background: linear-gradient(2deg, $grey, $grey_light);
     }
 }
 
