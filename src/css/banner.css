@@ -2,7 +2,7 @@
   position: relative;
   height: 450px;
   background-size: cover;
-  background: linear-gradient(2deg, #f2f2f2, whitesmoke);
+  background: #121314;
   z-index: 2; }
   .landing .cover {
     position: relative;

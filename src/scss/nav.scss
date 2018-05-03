@@ -7,9 +7,11 @@
     font-size: 1.3em;
     width: 100vw;
     top: 0;
-    color: $grey;
+    color: $white;
     background-color: rgba(0,0,0,0);
     background-color: white;
+    background: $grey_darker;
+    background: $black;
     box-sizing: content-box;
     transition: all .42s;
     // box-shadow: 0 0 30px $shadow_light;
@@ -27,25 +29,34 @@
             display: flex;
             align-items: center;
             height: $navHeight;
+            text-decoration: none;
+            &:visited{
+                color:inherit;
+            }
             .logo{
                 width: 7px;
                 height: 7px;
                 margin: 20px 25px 20px 20px;
                 background-color: transparent; 
                 // background-color: red;
+                color: $white;
 
                 border-radius: 50%;
                 box-shadow:
-                    20px 0px 0 0 $grey, 
-                    16.18px 11.76px 0 0 $grey, 
-                    6.18px 19.02px 0 0 $grey, 
-                    -6.18px 19.02px 0 0 $grey, 
-                    -16.18px 11.76px 0 0 $grey, 
-                    -20px 0px 0 0 $grey, 
-                    -16.18px -11.76px 0 0 $grey, 
-                    -6.18px -19.02px 0 0 $grey, 
-                    6.18px -19.02px 0 0 $grey, 
-                    16.18px -11.75px 0 0 $grey;
+                    20px 0px 0 0 $white, 
+                    16.18px 11.76px 0 0 $white, 
+                    6.18px 19.02px 0 0 $white, 
+                    -6.18px 19.02px 0 0 $white, 
+                    -16.18px 11.76px 0 0 $white, 
+                    -20px 0px 0 0 $white, 
+                    -16.18px -11.76px 0 0 $white, 
+                    -6.18px -19.02px 0 0 $white, 
+                    6.18px -19.02px 0 0 $white, 
+                    16.18px -11.75px 0 0 $white;
+
+                &:visited {
+                    color: inherit;
+                }
             }
             h1 {
                 font-size: 2.7em;
@@ -68,7 +79,7 @@
             height: $navHeight;
             display: flex;
             align-items: center;
-            color: $grey;
+            color: $white;
         }
         ul{
             margin-left: auto;
@@ -80,16 +91,21 @@
                 a{
                     text-decoration: none;
                     color:inherit;
-                    // border:1px solid red;
                     height: 100%;
                     display: flex;
                     align-items: center;
                     transition: all .22s;
+                    background: linear-gradient(50deg, $color, $color_lighter);
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    filter: brightness(1.5) grayscale(100%);
+                    
                     &:visited{
                         color:inherit;
                     }
                     &:hover{
-                        color:$color_dark;
+                        filter: brightness(1) grayscale(0%);
                     }
                 }
             }
@@ -116,8 +132,10 @@
     // background: linear-gradient(10deg, $color, $color_light, $color);
     // background: $grey;
     background: $off_white;
+    background: linear-gradient( 4deg, $color, $color_light);
+    background: $white;
     margin-top: - $navHeight;
-    height: $navHeight + 4px;
+    height: $navHeight + 5px;
     position: sticky; // still looks good even if browser can not support
     top: 0;
     z-index: 1;

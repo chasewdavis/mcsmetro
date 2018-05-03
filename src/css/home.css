@@ -21,7 +21,7 @@
       margin-left: 15px; }
 
 .solutions {
-  background: white; }
+  background: #1b1c1d; }
   .solutions > .header {
     border-radius: 7px;
     color: #9d9db1;
@@ -40,18 +40,19 @@
     grid-gap: 25px; }
     .solutions .contain .box {
       position: relative;
-      background: white;
       padding: 50px 30px 30px 30px;
-      border: 5px solid #f2f2f2;
-      border-radius: 3px;
+      border-width: 5px;
+      border-style: solid;
+      border-image: linear-gradient(80deg, #ff5e00, #ffa617) 1;
+      filter: brightness(1.3) grayscale(100%);
+      border-radius: 5px;
       transition: all .42s;
       color: #9d9db1;
       cursor: pointer; }
       .solutions .contain .box svg {
         width: 65%;
         margin-left: 17.5%;
-        transition: all .42s;
-        filter: grayscale(100%); }
+        transition: all .42s; }
         .solutions .contain .box svg path {
           fill: none;
           stroke-linejoin: round;
@@ -70,8 +71,7 @@
         background: linear-gradient(50deg, #ff5e00, #ffa617);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
-        background-clip: text;
-        filter: grayscale(100%); }
+        background-clip: text; }
       .solutions .contain .box p {
         color: inherit;
         padding-bottom: 2px;
@@ -79,21 +79,31 @@
         background: linear-gradient(50deg, #ff5e00, #ffa617);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
-        background-clip: text;
-        filter: grayscale(100%); }
+        background-clip: text; }
+      .solutions .contain .box::before {
+        content: '';
+        position: absolute;
+        transition: inherit;
+        top: -5px;
+        left: -5px;
+        width: 100%;
+        height: 100%;
+        border: inherit;
+        filter: opacity(0.5) blur(0.5rem);
+        z-index: -2;
+        background-color: rgba(255, 255, 255, 0.1); }
       .solutions .contain .box:hover {
-        color: #ff5e00; }
-        .solutions .contain .box:hover svg {
-          filter: grayscale(0%); }
-        .solutions .contain .box:hover h2 {
-          filter: grayscale(0%); }
-        .solutions .contain .box:hover p {
-          color: #ff5e00;
-          filter: grayscale(0%); }
+        color: #ff5e00;
+        filter: brightness(1) grayscale(0%); }
+        .solutions .contain .box:hover::before {
+          filter: opacity(1) blur(0.5rem);
+          border: inherit;
+          background-color: rgba(255, 94, 0, 0.1); }
 
 footer {
   text-align: center;
-  background: linear-gradient(2deg, #f2f2f2, whitesmoke);
+  border: whitesmoke;
+  background: #121314;
   color: #78788c;
   padding: 65px 0;
   position: relative; }
@@ -103,7 +113,9 @@ footer {
     width: 100%;
     height: 50px;
     background: linear-gradient(2deg, #e73d23, #ff7a2d);
-    background: linear-gradient(2deg, #78788c, #9d9db1); }
+    background: linear-gradient(2deg, #78788c, #9d9db1);
+    background: linear-gradient(2deg, #323250, #121314);
+    background: black; }
 
 @media only screen and (max-width: 1200px) {
   .contain {

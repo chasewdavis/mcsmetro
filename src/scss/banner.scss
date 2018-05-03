@@ -6,7 +6,8 @@
     // background-image: url('./../images/jpg/net.jpg');
     background-size: cover;
     // background: linear-gradient(15deg, $color, $color_light) fixed;
-    background: linear-gradient(2deg, $off_white, $white);
+    // background: linear-gradient(2deg, $off_white, $white);
+    background: $black;
     z-index: 2;
     // background-position: fixed;
     .cover{

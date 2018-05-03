@@ -1,9 +1,5 @@
 @import './../utilities/variables.scss';
 
-// body {
-    
-// }
-
 // general contain;
 .contain, .solutions > .header {
     width: 70%;
@@ -34,20 +30,14 @@
 }
 
 .solutions {
-    background: white;
+    background: $grey_darker;
 
     & > .header {
-        // padding-top: 20px;
-        // background: white;
-        // box-shadow: 0 0 20px $shadow_light;
-        // border: 4px solid $grey_light;
         border-radius: 7px;
         color: $grey_light;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        // justify-content: space-between;
-        // align-items: center;
         h1{
             font-size: 2.4em;
             margin-bottom: 10px;
@@ -57,20 +47,18 @@
         }
     }
     .contain {
-        // width: 70%;
-        // margin-left: 15%;
         display: grid;
         padding: 25px 0;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         grid-gap: 25px;
         .box{
             position: relative;
-            background: white;
             padding: 50px 30px 30px 30px;
-            // box-shadow: 6px 8px 22px $shadow_light;
-            // border: 6px solid $grey_light;
-            border: 5px solid $off_white;
-            border-radius: 3px;
+            border-width: 5px;
+            border-style: solid;
+            border-image: linear-gradient(80deg, $color, $color_lighter) 1;
+            filter: brightness(1.3) grayscale(100%);
+            border-radius: 5px; // fallback
             transition: all .42s;
             color: $grey_light;
             cursor: pointer;
@@ -78,7 +66,6 @@
                 width: 65%;
                 margin-left: 17.5%;
                 transition: all .42s;
-                filter: grayscale(100%);
                 path {
                     fill:none;
                     stroke-linejoin: round;
@@ -100,7 +87,6 @@
                 -webkit-text-fill-color: transparent;
                 -webkit-background-clip: text;
                 background-clip: text;
-                filter: grayscale(100%);
             }
             p {
                 color: inherit; // fallback
@@ -110,20 +96,27 @@
                 -webkit-text-fill-color: transparent;
                 -webkit-background-clip: text;
                 background-clip: text;
-                filter: grayscale(100%);
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                transition: inherit;
+                top: -5px;
+                left: -5px;
+                width: 100%;
+                height: 100%;
+                border: inherit;
+                filter: opacity(.5) blur(.5rem);
+                z-index: -2;
+                background-color: rgba(255,255,255,.1);
             }
             &:hover{
-                color: $color;
-                // border: 5px solid $grey_light;
-                svg{
-                    filter: grayscale(0%);
-                }
-                h2{
-                    filter: grayscale(0%);
-                }
-                p {
-                    color: $color;
-                    filter: grayscale(0%);
+                color: $color; // fallback
+                filter: brightness(1) grayscale(0%);
+                &::before{
+                    filter: opacity(1) blur(.5rem); // adds glow
+                    border: inherit;
+                    background-color: rgba(255, 94, 0, .1);;
                 }
             }
         }
@@ -132,8 +125,8 @@
 
 footer{
     text-align: center;
-    background: linear-gradient(2deg, $off_white, $white);
-    // border-top: 5px solid $off_white;
+    border: $white;
+    background: $black;
     color: $grey;
     padding: 65px 0;
     position: relative;
@@ -144,6 +137,8 @@ footer{
         height: 50px;
         background: linear-gradient(2deg, $color_dark, $color_light);
         background: linear-gradient(2deg, $grey, $grey_light);
+        background: linear-gradient(2deg, $grey_dark, $black);
+        background: black;
     }
 }
 
@@ -207,11 +202,6 @@ footer{
             padding: 15px;
         }
     }
-    // .landing {
-    //     // .contain {
-    //     //     // border: 2px solid fuchsia;
-    //     // }
-    // }
 }
 
 @media only screen and(max-width: 740px){
